@@ -1,0 +1,23 @@
+{
+  "name": "bigshop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Stilone/firstsite.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Stilone/firstsite/issues"
+  },
+  "homepage": "https://github.com/Stilone/firstsite#readme",
+  "dependencies": {
+    "bootstrap": "^5.0.0-beta2",
+    "static-server": "^2.2.1"
+  }
+}
