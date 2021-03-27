@@ -1,10 +1,6 @@
 const mockProducts = window.mock.products;
-const cartList = window.cartList;
 
 const productsListElement = document.getElementById('products-list');
-const cart = document.getElementById('cart');
-const cartBlock = document.getElementById('product-cart');
-const addedProducts = document.getElementById('added-products');
 
 const productItemList = (product) => {
     let result = (item, index) => {
