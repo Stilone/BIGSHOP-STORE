@@ -14,6 +14,48 @@
      margin: 0 auto;
  }
 
+ form {
+     position: relative;
+     width: 300px;
+     margin: 0 auto;
+     height: 42px;
+ }
+.search {
+     height: 42px;
+     width: 0;
+     padding: 0 42px 0 15px;
+     border: none;
+     border-bottom: 2px solid transparent;
+     outline: none;
+     background: transparent;
+     transition: .4s cubic-bezier(0, 0.8, 0, 1);
+     position: absolute;
+     top: 0;
+     right: 0;
+     z-index: 2;
+ }
+.search:focus {
+     width: 300px;
+     z-index: 1;
+     border-bottom: 2px solid silver;
+ }
+.search-btn {
+     background: black;
+     border-radius: 5px;
+     border: none;
+     height: 37px;
+     width: 75px;
+     position: absolute;
+     top: 0;
+     right: -35px;
+     cursor: pointer;
+    color: white;
+ }
+.search-btn:before {
+     font-size: 16px;
+     color: silver;
+ }
+
  main {
     display: flex;
      justify-content: center;
