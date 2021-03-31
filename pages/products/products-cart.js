@@ -1,46 +1,40 @@
-// Используй суфикс Element для обьектов такого типа
-const cart = document.getElementById('cart');
-const cartBlock = document.getElementById('product-cart');
-const addedProducts = document.getElementById('added-products');
-const fullPrice = document.getElementById('full-price');
+const cartElement = document.getElementById('cart');
+const cartBlockElement = document.getElementById('product-cart');
+const addedProductsElement = document.getElementById('added-products');
+const fullPriceElement = document.getElementById('full-price');
 
 let cartList = [];
 
-cart.addEventListener('click', () => {
-    let classes = cartBlock.classList;
+cartElement.addEventListener('click', () => {
+    let classes = cartBlockElement.classList;
     let result = classes.contains('product-cart-none');
 
     if (result) {
-        cartBlock.classList.remove('product-cart-none');
-        cartBlock.classList.add('product-cart');
+        cartBlockElement.classList.remove('product-cart-none');
+        cartBlockElement.classList.add('product-cart');
     } else {
-        cartBlock.classList.add('product-cart-none');
+        cartBlockElement.classList.add('product-cart-none');
     }
 });
 
 const removeProducts = (index) => {
     cartList.splice(index, 1);
-    renderCart(cartList, addedProducts);
+    renderCart(cartList, addedProductsElement);
+    priceCalculator(cartList);
 }
 
 const deleteProduct = (index) => {
-    let newProduct = mockProducts[index];
+    let newProduct = cartList[index];
 
-    const checkProduct = (product) => {
-        return product.id === newProduct.id
-    }
+        if(newProduct.count <= 1) {
+            newProduct.count = 1
 
-    const existIndex = cartList.findIndex(checkProduct);
+        } else {
+            newProduct.count -= 1
+        }
 
-    if (existIndex >= 0) {
-         cartList[existIndex].count -= 1
-    }
-
-    if(cartList[existIndex].count <= 1) { // ошибка тут
-        cartList[existIndex].count = 1
-    }
-
-    renderCart(cartList, addedProducts);
+    renderCart(cartList, addedProductsElement);
+    priceCalculator(cartList);
 }
 
 const renderCart = (products, cartElement) => {
@@ -58,9 +52,18 @@ const renderCart = (products, cartElement) => {
     cartElement.innerHTML = products.map(result).join('');
 }
 
-const priceRender = (products, cartElement) => {
+const priceCalculator = (products) => {
+    let sum = 0
+    const calculator = (item) => {
+        return sum += item.price * item.count;
+    }
+    products.forEach(calculator);
+    priceRender(cartList, fullPriceElement, sum);
+}
+
+const priceRender = (products, cartElement, sum) => {
      let result = (item) => {
-          return `<p class="full-price">${item.price * item.count}</p>`;
+          return `<p class="full-price">${sum}</p>`;
       }
 
       cartElement.innerHTML = products.map(result).join('');

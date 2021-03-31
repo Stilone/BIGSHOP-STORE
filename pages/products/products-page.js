@@ -35,8 +35,8 @@ const addProduct = (index) => {
         cartList.push(newProduct);
     }
 
-    renderCart(cartList, addedProducts);
-    priceRender(cartList, fullPrice);
+    renderCart(cartList, addedProductsElement);
+    priceCalculator(cartList);
 }
 
 const renderProducts = () => {
