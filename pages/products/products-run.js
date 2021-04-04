@@ -1,1 +1,1 @@
-renderProducts();
+renderProducts(mockProducts);
