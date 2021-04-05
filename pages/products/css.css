@@ -56,6 +56,24 @@
      color: silver;
  }
 
+ .search-btn-update {
+     background: darkslateblue;
+     border-radius: 5px;
+     border: none;
+     height: 27px;
+     width: 55px;
+     position: absolute;
+     top: 9px;
+     right: -91px;
+     cursor: pointer;
+     color: white;
+     font-size: 10px;
+ }
+ .search-btn-update:before {
+     font-size: 16px;
+     color: silver;
+ }
+
  main {
     display: flex;
      justify-content: center;
