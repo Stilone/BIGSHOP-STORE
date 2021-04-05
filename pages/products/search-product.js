@@ -6,10 +6,7 @@ const searchBtnUpdate = document.getElementById('search-btn-update');
 
 searchBtn.addEventListener('click', () => {
     const productsCheck = (item) => {
-        if(search.value === item.name) {
-            console.log(search.value);
-            return true;
-        }
+        return item.name.includes(search.value);
     }
     const searchProducts = mockProducts.filter(productsCheck);
     console.log(searchProducts);
@@ -18,4 +15,4 @@ searchBtn.addEventListener('click', () => {
 
 searchBtnUpdate.addEventListener('click', () => {
     renderProducts(mockProducts);
-})
+});
