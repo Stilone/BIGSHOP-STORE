@@ -28,20 +28,20 @@
 // console.log(down);
 // console.log(JSON.parse(down));
 
-let array1 = {
-    name: 'dima',
-    age: 25,
-    date: '29.09.1995',
-}
-
-result = JSON.stringify(array1);
-result2 = JSON.parse(result)
-
-console.log(result);
-console.log(result2);
-
-let array2 = `{
-    "name":"dima",
-`
-let result3 = JSON.parse(array2);
-console.log(result3);
+// let array1 = {
+//     name: 'dima',
+//     age: 25,
+//     date: '29.09.1995',
+// }
+//
+// result = JSON.stringify(array1);
+// result2 = JSON.parse(result)
+//
+// console.log(result);
+// console.log(result2);
+//
+// let array2 = `{
+//     "name":"dima",
+// `
+// let result3 = JSON.parse(array2);
+// console.log(result3);
