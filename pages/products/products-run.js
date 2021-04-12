@@ -1,1 +1,2 @@
 renderProducts(mockProducts);
+parseCart(cartList);

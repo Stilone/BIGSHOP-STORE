@@ -69,9 +69,8 @@ const priceRender = (products, cartElement, sum) => {//рендер, котор�
       cartElement.innerHTML = products.map(result).join('');
 }
 
-const parseCart = (products, cartElement) => {
+const parseCart = (products) => {
     const result = JSON.parse(localStorage.result);
     products.push(result);
-    console.log(products);
-
+    renderCart(products,  addedProductsElement);
 }
