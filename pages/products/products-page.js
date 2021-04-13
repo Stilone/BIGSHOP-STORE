@@ -39,9 +39,11 @@ const addProduct = (index) => {//функция onclick принимает ин�
     priceCalculator(cartList);
 }
 
-window.onclose = function () {
-    const stringCart = JSON.stringify(cartList);
-    localStorage.result = stringCart;
+window.onunload = function () {
+    const cartProducts = JSON.stringify(cartList);
+    console.log(cartProducts);
+    localStorage.setItem('products', cartProducts);
+    console.log(localStorage.products);
 }
 
 const renderProducts = (products) => { //функция вызова другой функции, с присваиванием в нее переменной, которая хранит в себе
