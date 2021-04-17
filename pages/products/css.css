@@ -115,3 +115,16 @@
     background-color: silver;
     width: 290px;
 }
+
+ .buy {
+     position: fixed;
+     top: 488px;
+     right: 217px;
+     width: 75px;
+     height: 25px;
+     line-height: 8px;
+     border: solid black 1px;
+     background-color: black;
+     color: white;
+     text-decoration: none;
+ }

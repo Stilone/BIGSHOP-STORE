@@ -3,6 +3,7 @@ const cartBlockElement = document.getElementById('product-cart');
 const addedProductsElement = document.getElementById('added-products');
 const fullPriceElement = document.getElementById('full-price');
 
+
 let cartList = [];
 
 cartElement.addEventListener('click', () => {// эта функция по клику позволяет поменять стили класса cart
@@ -63,15 +64,17 @@ const priceCalculator = (products) => {//эта функция берет мас
 
 const priceRender = (products, cartElement, sum) => {//рендер, который отображает в корзине общую цену всех товаров
      let result = (item) => {
-          return `<p class="full-price">${sum}</p>`;
+          return `<p class="full-price">${sum}</p>
+                   <a href="order-page.html" class="buy" id="buy">купить</a>`;
       }
 
-      cartElement.innerHTML = products.map(result).join('');
+    cartElement.innerHTML = products.map(result).join('');
 }
 
-const parseCart = (prod, cartElement) => {
-    prod = localStorage.getItem('products');
+const parseCart = (cartElement) => {
+    let prod = localStorage.getItem('products');
     const result = JSON.parse(prod);
-    prod = result;
-    renderCart(prod, cartElement);
+    cartList = result;
+    renderCart(cartList, cartElement);
 }
+

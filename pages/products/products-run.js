@@ -1,2 +1,3 @@
 renderProducts(mockProducts);
-parseCart(cartList, addedProductsElement);
+parseCart(addedProductsElement);
+parseOrder(orderElement);
