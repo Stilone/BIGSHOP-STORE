@@ -6,6 +6,7 @@ const fullPriceElement = document.getElementById('full-price');
 
 let cartList = [];
 
+ const addCartToggle = () => {
 cartElement.addEventListener('click', () => {// эта функция по клику позволяет поменять стили класса cart
     let classes = cartBlockElement.classList;//изначально карт имеет стиль display none. далее мы проверяем если класс который имеет этот стиль есть
     let result = classes.contains('product-cart-none');//то удаляем его и присваиваем новый, иначе присваиваем старый
@@ -17,6 +18,7 @@ cartElement.addEventListener('click', () => {// эта функция по кл�
         cartBlockElement.classList.add('product-cart-none');
     }
 });
+}
 
 const removeProducts = (index) => {//функция клика по индексу удаляет элемент из массива, после рендерит массив на страницу.
     cartList.splice(index, 1);
