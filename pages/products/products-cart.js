@@ -3,7 +3,6 @@ const cartBlockElement = document.getElementById('product-cart');
 const addedProductsElement = document.getElementById('added-products');
 const fullPriceElement = document.getElementById('full-price');
 
-
 let cartList = [];
 
  const addCartToggle = () => {
