@@ -9,7 +9,7 @@ const addCartToggle = () => {
     cartElement.addEventListener('click', () => {// эта функция по клику позволяет поменять стили класса cart
     let classes = cartBlockElement.classList;//изначально карт имеет стиль display none. далее мы проверяем если класс который имеет этот стиль есть
     let result = classes.contains('product-cart-none');//то удаляем его и присваиваем новый, иначе присваиваем старый
-
+    priceRender(cartList, fullPriceElement, priceCalculator(cartList));
     if (result) {
         cartBlockElement.classList.remove('product-cart-none');
         cartBlockElement.classList.add('product-cart');
@@ -26,15 +26,13 @@ const removeProducts = (index) => {//функция клика по индекс
 
 const deleteProduct = (index) => {//функция клика, берем элемент массива по индексу и присваиваем его newProduct, далее проверяем,
     let newProduct = cartList[index];//если в элементе массива каунт меньше или равен 1 то присваиваем каунту 1,
-                                    //если каунт больше, то уменьшаем его на 1, после рендерим.
+                                    //если каунт больше, то уменьшаем его на 1.
         if(newProduct.count <= 1) {
             newProduct.count = 1
         } else {
             newProduct.count -= 1
         }
-
-    renderCart(cartList, addedProductsElement);
-    priceCalculator(cartList);
+    return cartList;
 }
 
 const renderCart = (products, cartElement) => {  //эта функция выполняет рендер в корзину, для каждого индекса массива
@@ -43,11 +41,27 @@ const renderCart = (products, cartElement) => {  //эта функция вып�
         renderCart(items, cartElement);
 
         const sum = priceCalculator(items);
-        priceRender(items, fullPriceElement, sum);
+        try {
+            priceRender(items, fullPriceElement, sum);
+        } catch (e) {
+            fullPriceRender(items, fullOrderElement, sum);
+        }
     };
 
-    // добавил чтоб в onlick юзать
+    const deleteHandle = (index) => {
+        const items = deleteProduct(index);
+        renderCart(items, cartElement);
+
+        const sum = priceCalculator(items);
+        try {
+            priceRender(items, fullPriceElement, sum);
+        } catch (e) {
+            fullPriceRender(items, fullOrderElement, sum);
+        }
+    };
+
     window.remove = removeHandle;
+    window.deleted = deleteHandle;
 
     let result = (item, index) => {  //каждый раз когда мы вызываем эту функцию, она работает с новыми элементами индекса, cartList, если конечно они изменились :)
         return `<div>               
@@ -56,7 +70,7 @@ const renderCart = (products, cartElement) => {  //эта функция вып�
                    <p>${item.price * item.count}</p>
                    <p>${item.count}</p>
                    <button onclick="remove(${index})">Удалить</button>
-                   <button onclick="deleteProduct(${index})">-</button>
+                   <button onclick="deleted(${index})">-</button>
                 </div>`;
     }
 
@@ -65,7 +79,7 @@ const renderCart = (products, cartElement) => {  //эта функция вып�
 
 const priceCalculator = (products) => {//эта функция берет массив, и для каждого элемента в массиве, выполняет функцию
     let sum = 0                     //функция умножает цену на количество и записывает в sum, если в sum уже есть цена
-    const calculator = (item) => {  //она прибавит к ней. После выполнит новый отдельный рендер.
+    const calculator = (item) => {  //она прибавит к ней.
         return sum += item.price * item.count;
     }
     products.forEach(calculator);

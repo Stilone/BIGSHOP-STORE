@@ -36,7 +36,7 @@ const addProduct = (index) => {//функция onclick принимает ин�
     }
 
     renderCart(cartList, addedProductsElement);
-    priceCalculator(cartList);
+    priceRender(cartList, fullPriceElement, priceCalculator(cartList));
 }
 
 window.addEventListener('beforeunload', () => {

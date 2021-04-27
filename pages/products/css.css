@@ -128,3 +128,37 @@
      color: white;
      text-decoration: none;
  }
+
+ .buy:hover {
+     color: black;
+     background-color: silver;
+ }
+
+ .buy:active {
+     color: silver;
+     background-color: black;
+     border-color: silver;
+ }
+
+ .btn-order-back {
+     display: flex;
+     width: 75px;
+     height: 25px;
+     text-decoration: none;
+     color: #fff;
+     background-color: black;
+     word-break: break-all;
+     text-align: center;
+     border: 1px solid black;
+ }
+
+ .btn-order-back:hover {
+     color: black;
+     background-color: white;
+ }
+
+ .btn-order-back:active {
+     color: white;
+     background-color: black;
+     border-color: white;
+ }
