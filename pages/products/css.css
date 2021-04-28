@@ -109,18 +109,20 @@
     display: none;
 }
 
+.full-price-cart {
+
+}
+
 .full-price {
     position: fixed;
-    top: 488px;
+    top: 89px;
     background-color: silver;
-    width: 290px;
+    margin: 0 0 0 55px;
+    display: block;
 }
 
  .buy {
-     position: fixed;
-     top: 488px;
-     right: 217px;
-     width: 75px;
+     width: 73px;
      height: 25px;
      line-height: 8px;
      border: solid black 1px;

@@ -1,7 +1,7 @@
 const cartElement = document.getElementById('cart');
 const cartBlockElement = document.getElementById('product-cart');
 const addedProductsElement = document.getElementById('added-products');
-const fullPriceElement = document.getElementById('full-price');
+const fullPriceElement = document.getElementById('full-price-cart');
 
 let cartList = [];
 
@@ -41,11 +41,8 @@ const renderCart = (products, cartElement) => {  //эта функция вып�
         renderCart(items, cartElement);
 
         const sum = priceCalculator(items);
-        try {
-            priceRender(items, fullPriceElement, sum);
-        } catch (e) {
-            fullPriceRender(items, fullOrderElement, sum);
-        }
+
+        priceRender(items, fullPriceElement, sum);
     };
 
     const deleteHandle = (index) => {
@@ -53,11 +50,8 @@ const renderCart = (products, cartElement) => {  //эта функция вып�
         renderCart(items, cartElement);
 
         const sum = priceCalculator(items);
-        try {
-            priceRender(items, fullPriceElement, sum);
-        } catch (e) {
-            fullPriceRender(items, fullOrderElement, sum);
-        }
+
+        priceRender(items, fullPriceElement, sum);
     };
 
     window.remove = removeHandle;
@@ -88,8 +82,7 @@ const priceCalculator = (products) => {//эта функция берет мас
 
 const priceRender = (products, cartElement, sum) => {//рендер, который отображает в корзине общую цену всех товаров
      let result = (item) => {
-          return `<p class="full-price">${sum}</p>
-                   <a href="order-page.html" class="buy" id="buy">купить</a>`;
+          return `<p class="full-price">${sum}</p>`;
       }
 
     cartElement.innerHTML = products.map(result).join('');
