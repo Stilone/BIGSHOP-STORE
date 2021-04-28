@@ -110,15 +110,15 @@
 }
 
 .full-price-cart {
-
-}
-
-.full-price {
     position: fixed;
     top: 89px;
     background-color: silver;
     margin: 0 0 0 55px;
     display: block;
+}
+
+.full-price {
+
 }
 
  .buy {

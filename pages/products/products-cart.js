@@ -9,7 +9,7 @@ const addCartToggle = () => {
     cartElement.addEventListener('click', () => {// эта функция по клику позволяет поменять стили класса cart
     let classes = cartBlockElement.classList;//изначально карт имеет стиль display none. далее мы проверяем если класс который имеет этот стиль есть
     let result = classes.contains('product-cart-none');//то удаляем его и присваиваем новый, иначе присваиваем старый
-    priceRender(cartList, fullPriceElement, priceCalculator(cartList));
+    priceRender(fullPriceElement, priceCalculator(cartList));
     if (result) {
         cartBlockElement.classList.remove('product-cart-none');
         cartBlockElement.classList.add('product-cart');
@@ -42,7 +42,7 @@ const renderCart = (products, cartElement) => {  //эта функция вып�
 
         const sum = priceCalculator(items);
 
-        priceRender(items, fullPriceElement, sum);
+        priceRender(fullPriceElement, sum);
     };
 
     const deleteHandle = (index) => {
@@ -51,7 +51,7 @@ const renderCart = (products, cartElement) => {  //эта функция вып�
 
         const sum = priceCalculator(items);
 
-        priceRender(items, fullPriceElement, sum);
+        priceRender(fullPriceElement, sum);
     };
 
     window.remove = removeHandle;
@@ -80,12 +80,8 @@ const priceCalculator = (products) => {//эта функция берет мас
     return sum;
 }
 
-const priceRender = (products, cartElement, sum) => {//рендер, который отображает в корзине общую цену всех товаров
-     let result = (item) => {
-          return `<p class="full-price">${sum}</p>`;
-      }
-
-    cartElement.innerHTML = products.map(result).join('');
+const priceRender = (cartElement, sum) => {//рендер, который отображает в корзине общую цену всех товаров
+    cartElement.innerHTML = `<p class="full-price">${sum}</p>`;
 }
 
 const parseCart = (cartElement) => {
