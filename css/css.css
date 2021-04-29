@@ -117,9 +117,13 @@
     display: block;
 }
 
-.full-price {
-
+.full-price-order {
+    color: red;
 }
+
+ .full-price {
+     margin: 0;
+ }
 
  .buy {
      width: 73px;

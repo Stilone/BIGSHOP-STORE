@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>ORDER</title>
-    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="../../css/css.css">
 </head>
 <body>
-    <a href="products-page.html" class="btn-order-back" id="btn-order-back">Назад</a>
+    <a href="../products/products-page.html" class="btn-order-back" id="btn-order-back">Назад</a>
     <div id="order"></div>
-    <div id="full-price-cart">
+    <div  class="full-price-order" id="full-price-cart">
+
     </div>
 
 <form>
@@ -20,9 +21,10 @@
     <input type="tel" id="phone" name="phone"><br>
     <input type="submit" value="Отправить">
 </form>
-    <script src="products-mock.js"></script>
+    <script src="../../mock-data/products-mock.js"></script>
     <script src="order-page.js"></script>
-    <script src="products-cart.js"></script>
+    <script src="../products/products-cart.js"></script>
+    <script src="../local/local-storage.js"></script>
     <script src="order-run.js"></script>
 </body>
 </html>

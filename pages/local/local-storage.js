@@ -1,3 +1,7 @@
+window.addEventListener('beforeunload', () => {
+    const cartProducts = JSON.stringify(cartList);
+    localStorage.setItem('products', cartProducts);
+});
 
 // localStorage.one = 2;
 // localStorage.qwerty = 'Dima';
