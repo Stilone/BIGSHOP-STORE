@@ -12,19 +12,30 @@
 
     </div>
 
-<form>
-    <label for="name">Введите ваше имя</label><br>
-    <input type="text" id="name" name="name"><br>
-    <label for="email">Введите ваш email:</label><br>
-    <input type="email" id="email"><br>
-    <label for="phone">Введите ваш номер:</label><br>
-    <input type="tel" id="phone" name="phone"><br>
+<form id="form">
+    <div class="form-group">
+        <label for="name">имя:</label>
+        <input type="text" id="name" name="name">
+        <div class="errors"></div>
+    </div>
+    <div class="form-group">
+        <label for="email">email:</label>
+        <input type="email" id="email" name="email">
+        <div  class="errors"></div>
+    </div>
+    <div class="form-group">
+        <label for="phone">номер:</label>
+        <input type="phone" id="phone" name="phone" max="9">
+        <div class="errors"></div>
+    </div>
     <input type="submit" value="Отправить">
 </form>
     <script src="../../mock-data/products-mock.js"></script>
     <script src="order-page.js"></script>
     <script src="../products/products-cart.js"></script>
     <script src="../local/local-storage.js"></script>
+    <script src="buyer.js"></script>
+    <script src="order-submit.js"></script>
     <script src="order-run.js"></script>
 </body>
 </html>

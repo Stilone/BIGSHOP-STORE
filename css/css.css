@@ -105,13 +105,21 @@
     overflow-y: scroll;
 }
 
+ .cart-item {
+     background-color: azure;
+     outline: 1px solid black;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+ }
+
 .product-cart-none {
     display: none;
 }
 
 .full-price-cart {
-    position: fixed;
-    top: 89px;
+    position: absolute;
+    top: 0px;
     background-color: silver;
     margin: 0 0 0 55px;
     display: block;
@@ -167,4 +175,8 @@
      color: white;
      background-color: black;
      border-color: white;
+ }
+
+ .form-group {
+     margin: 20px;
  }

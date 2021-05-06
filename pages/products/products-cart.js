@@ -58,8 +58,8 @@ const renderCart = (products, cartElement) => {  //эта функция вып�
     window.deleted = deleteHandle;
 
     let result = (item, index) => {  //каждый раз когда мы вызываем эту функцию, она работает с новыми элементами индекса, cartList, если конечно они изменились :)
-        return `<div>               
-                   <img src="" alt="">
+        return `<div class="cart-item">               
+                   <img src="${item.img}" alt="" width="80px" height="100px">
                    <p>${item.name}</p>
                    <p>${item.price * item.count}</p>
                    <p>${item.count}</p>
