@@ -1,6 +1,7 @@
 # BIGSHOP Store
 
 Привет! 🚀 Этот проект стал моим вторым, и, возможно, самым важным. Когда я решил уйти с работы и посвятить больше времени программированию, BIGSHOP стал моим мостом в Javascript.
+
 Hello! 🚀 This project became my second, and perhaps the most significant. When I decided to leave my job and dedicate more time to programming, BIGSHOP became my bridge to JavaScript.
 
 Этот интернет-магазин был создан с использованием ванильного JavaScript.
@@ -12,6 +13,7 @@ To run the project, download and open the file:
 ``products-page.html``
 
 Некоторые особенности проекта включают:
+
 Some key features of the project include:
 
 - 🛒 Adding products to the cart (Добавление продуктов в корзину)
@@ -34,12 +36,15 @@ Some key features of the project include:
 ![Страница с добавленными товарами](https://sun9-32.userapi.com/impg/H36w6686ME8XaYPt6RwIVojGs5pxR_GxlfCmoQ/ow1LeNdZWx0.jpg?size=713x850&quality=96&sign=16711ac0b7d6fba48d7fb3221d25e7c6&type=album)
 
 Creating this project took me a month. It became a bridge to learning JavaScript, and every time I revisit the local-storage.js file, tears of memories come back.
+
 Cоздание этого проекта заняло у меня месяц. Этот проект стал для меня мостом в обучение JavaScript, и каждый раз, когда я возвращаюсь к файлу local-storage.js, вспоминаются слезы от воспоминаний.
 
 ## Acknowledgments (Благодарности)
 
-Огромное спасибо [SkyDropGG](https://github.com/SkyDropGG) за поддержку и помощь в процессе разработки! 🙌
 A huge thank you to [SkyDropGG](https://github.com/SkyDropGG) for the support and assistance during development! 🙌
+
+Огромное спасибо [SkyDropGG](https://github.com/SkyDropGG) за поддержку и помощь в процессе разработки! 🙌
+
 
 ---
 © Dmitry Astashin 😊✨
