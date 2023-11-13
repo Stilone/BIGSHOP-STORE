@@ -67,7 +67,7 @@ const renderCart = (products, cartElement) => {  //эта функция вып�
                    <button onclick="deleted(${index})">-</button>
                 </div>`;
     }
-
+    
     cartElement.innerHTML = products.map(result).join('');
 }
 
