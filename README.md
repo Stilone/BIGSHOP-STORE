@@ -22,13 +22,10 @@
 ![Главная страница](https://sun9-19.userapi.com/impg/cffdpqyml3LM_ATvj3tq9BnXZj8JJ7lBP5_ljw/OMV7qo6KK8U.jpg?size=1450x801&quality=96&sign=7dbe7fda8344f9ab767d548591093213&type=album)
 
 ### Корзина
-![Корзина](![image](https://github.com/Stilone/BIGSHOP1/assets/54247765/ca5235db-d808-4156-8abb-9df696f70c06))
+![Корзина](https://sun9-1.userapi.com/impg/vw2CqvYnHMND1HvbibakYeAA6dVIh4RJ-erIiA/5P1v-qvYFy0.jpg?size=724x574&quality=96&sign=dcd89af69af074ab784657f89db7ef1e&type=album)
 
 ### Страница с добавленными товарами
-![Страница с добавленными товарами](![image](https://github.com/Stilone/BIGSHOP1/assets/54247765/5f076ebb-0f6a-4fd2-b41a-30809ae94acd))
-
-### Покупка выполнена
-![Покупка выполнена](![image](https://github.com/Stilone/BIGSHOP1/assets/54247765/45b07f79-27de-4944-8edd-952f06cea451))
+![Страница с добавленными товарами](https://sun9-32.userapi.com/impg/H36w6686ME8XaYPt6RwIVojGs5pxR_GxlfCmoQ/ow1LeNdZWx0.jpg?size=713x850&quality=96&sign=16711ac0b7d6fba48d7fb3221d25e7c6&type=album)
 
 Создание этого проекта заняло у меня месяц, этот проект стал для меня мостом в обучение Javascript, в файле local-storege.js можно найти как я практиковался создавать переменные и функции, каждый раз как смотрю, наворачиваются слезы воспоминаний.
 
